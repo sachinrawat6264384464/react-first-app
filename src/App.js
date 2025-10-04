@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
-import Login from './login.jsx'
+
+import Card from './card.js'
 function App() {
   return (
   <>
@@ -17,7 +18,8 @@ function App() {
        <button className="btn2"> SIGN-IN  </button>
        </div>
  </nav>
- < Login/>
+ 
+<Card/>
    </>
    
   );

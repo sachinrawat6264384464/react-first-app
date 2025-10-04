@@ -80,7 +80,7 @@ width: 100%;
   gap: 25px;
   justify-content: center;
   padding: 10px;
-  margin-left: 12.5rem;
+  margin-left: 11rem;
 }
 
 /* Individual Card */
@@ -171,9 +171,42 @@ width: 100%;
 
   .card {
     padding: 15px;
+   
   }
 
   .card p {
     font-size: 0.85rem;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .bg h1 {
+    font-size: 1.8rem;
+  }
+
+  .app input {
+    width: 90%;
+    font-size: 0.9rem;
+    margin-left: 0; /* center on mobile */
+  }
+
+  .cards {
+    width: 0%;
+    
+    gap: 15px;
+  
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
   }
 }

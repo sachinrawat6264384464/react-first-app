@@ -1,20 +1,97 @@
 .nav {
-  background: lightcoral;
+position: absolute;
   padding: 20px;
   height: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.navicon{
+margin-top: 5%;
+margin-left: 4%;
+width: 3.7vw;
+height: 7vh;
+border-radius: 60px;
+background-color: white;
+
+ 
+ }
+
+
 h1{
-margin-left: 8rem;
+margin-left: 1rem;
+position: relative;
+bottom: 38%;
+right: 13%;
+color: rgb(6, 6, 7);
 }
 .menu {
-  display: flex;
-  gap: 6rem;
+flex-direction: column;
+  
   list-style: none;
+  margin-top: 60vh;
+  position: relative;
+  right: 20%;
   
 }
 h2{
-color: aliceblue;
+margin-top: 3rem;
+color: rgb(235, 241, 241);
+font-size: 1.4rem;
+font-weight: 900;
+}
+h2:hover{
+cursor: pointer;
+border-bottom: 2px solid rgb(7, 208, 155);
+
+}
+.btns{
+position: relative;
+top: 10%;
+left: 70vw;
+display: flex;
+
+
+
+}
+.btn1{
+  width:7vw;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 1.3rem;
+  height: 7vh;
+  border: none;
+  border-radius: 20px;
+background: linear-gradient(to top, rgba(217, 214, 214, 0.8), rgba(196, 19, 19, 0));
+color: azure;
+}
+.btn1:hover{
+  font-size: 1.3rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.btn2{
+  width:7vw;
+  height: 7vh;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 20px;
+background: linear-gradient(to top, rgb(9, 235, 238), rgb(18, 152, 136));
+color: azure;
+}
+.btn2:hover{
+  font-size: 1.3rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+@media (max-width: 750px) {
+
+ .nav{
+ 
+ width: 94vw;
+ }
+  .menu{
+  gap: 3rem;
+  }
 }

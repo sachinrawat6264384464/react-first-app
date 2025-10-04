@@ -1,17 +1,35 @@
+body{
+background-color: #333;
+}
+
+.home{
+width: 100%;
+display: grid;
+height: 100vh;
+background-image: url("gg.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+
+}
+
 .login-container {
   width: 320px;
-  margin: 50px auto;
+  height: 40vh;
+  margin: 176px auto;
   padding: 25px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background: #f9f9f9;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  background: rgba(129, 125, 125, 0.1);
+  box-shadow: 0px 4px 10px rgba(154, 39, 39, 0.1);
   text-align: center;
 }
 
 .login-container h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: #0a1515;
+  font-size: 1.7rem;
 }
 
 .login-form .form-group {
@@ -23,7 +41,8 @@
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
-  color: #555;
+  color: #070707;
+  font-size: 1.1rem;
 }
 
 .login-form input {
@@ -42,14 +61,43 @@
 .btn {
   width: 100%;
   padding: 10px;
-  background: #4caf50;
-  color: white;
+  background: #08e5d6;
+  color: rgb(21, 1, 1);
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 5%;
 }
 
 .btn:hover {
   background: #45a049;
+}
+.src{
+width: 59%;
+height: 9vh;
+background: rgb(211, 20, 20,0.3);
+position: relative;
+bottom: 70%;
+left: 20%;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 7px;
+}
+.inpu{
+
+width: 35%;
+height: 6vh;
+font-size: 1.2rem;
+border: none;
+border-radius: 4px;
+}
+.search{
+width: 12%;
+height: 6vh;
+font-size: 1.2rem;
+border: none;
+border-radius: 4px;
+
 }

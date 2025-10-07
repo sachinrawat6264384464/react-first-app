@@ -7,18 +7,16 @@ function Card() {
     JSON.parse(localStorage.getItem("favorites")) || []
   );
 
-  const destinations = [
-    { id: 1, name: "Paris", desc: "City of lights", img: "https://via.placeholder.com/200" },
-    { id: 2, name: "Tokyo", desc: "Land of the rising sun", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-    { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-  ];
+  
+const destinations = [
+  { id: 1, name: "Paris", desc: "City of Lights", img: "https://via.placeholder.com/200" },
+  { id: 2, name: "Tokyo", desc: "Land of the Rising Sun", img: "https://via.placeholder.com/200" },
+  { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
+  { id: 4, name: "Bali", desc: "Tropical paradise", img: "https://via.placeholder.com/200" },
+  { id: 5, name: "London", desc: "The historic city", img: "https://via.placeholder.com/200" },
+  { id: 6, name: "Sydney", desc: "Harbor city", img: "https://via.placeholder.com/200" },
+];
+
 
   const filtered = destinations.filter((d) =>
     d.name.toLowerCase().includes(search.toLowerCase())

@@ -5,11 +5,12 @@ import FavoritesPage from './FavoritesPage.js'; // ❌ galat tha, ab sahi path d
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
+
   return (
     <Router>
       {/* ✅ Navbar always visible */}
       <nav className="nav">
-        <div className="navicon"><h1> |||</h1></div>
+        
         <menu className='menu'>
           <h2>Home</h2>
           <h2>About</h2>
@@ -23,8 +24,7 @@ function App() {
           <h2>Service</h2>
         </menu>
         <div className="btns">
-          <button className="btn1">SIGNUP</button>
-          <button className="btn2">SIGN-IN</button>
+          
         </div>
       </nav>
 

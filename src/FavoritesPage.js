@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function FavoritesPage() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  const [favorites, setFavorites] = useState([]);
+
+  // Component load hote hi localStorage se data fetch karna
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(saved);
+  }, []);
+
+  // Delete function
+  const removeFavorite = (id) => {
+    const updated = favorites.filter((place) => place.id !== id);
+    setFavorites(updated);
+    localStorage.setItem("favorites", JSON.stringify(updated));
+  };
 
   return (
     <div style={{ 
@@ -31,7 +44,8 @@ function FavoritesPage() {
               padding: "20px",
               borderRadius: "15px",
               backdropFilter: "blur(6px)",
-              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)"
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+              position: "relative"
             }}>
               <img 
                 src={place.img} 
@@ -45,6 +59,24 @@ function FavoritesPage() {
               />
               <h3 style={{ marginTop: "10px" }}>{place.name}</h3>
               <p>{place.desc}</p>
+              {/* Delete button */}
+              <button 
+                onClick={() => removeFavorite(place.id)}
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  right: "10px",
+                  padding: "5px 10px",
+                  border: "none",
+                  borderRadius: "5px",
+                  background: "red",
+                  color: "white",
+                  cursor: "pointer",
+                  fontWeight: "600"
+                }}
+              >
+                ❌ Delete
+              </button>
             </div>
           ))}
         </div>

@@ -7,16 +7,14 @@ function Card() {
     JSON.parse(localStorage.getItem("favorites")) || []
   );
 
-  
-const destinations = [
-  { id: 1, name: "Paris", desc: "City of Lights", img: "https://via.placeholder.com/200" },
-  { id: 2, name: "Tokyo", desc: "Land of the Rising Sun", img: "https://via.placeholder.com/200" },
-  { id: 3, name: "New York", desc: "The Big Apple", img: "https://via.placeholder.com/200" },
-  { id: 4, name: "Bali", desc: "Tropical paradise", img: "https://via.placeholder.com/200" },
-  { id: 5, name: "London", desc: "The historic city", img: "https://via.placeholder.com/200" },
-  { id: 6, name: "Sydney", desc: "Harbor city", img: "https://via.placeholder.com/200" },
-];
-
+  const destinations = [
+    { id: 1, name: "Paris", desc: "City of Lights", img: "" },
+    { id: 2, name: "Tokyo", desc: "Land of the Rising Sun", img: "https://source.unsplash.com/200x150/?tokyo" },
+    { id: 3, name: "New York", desc: "The Big Apple", img: "https://source.unsplash.com/200x150/?newyork" },
+    { id: 4, name: "Bali", desc: "Tropical paradise", img: "https://source.unsplash.com/200x150/?bali" },
+    { id: 5, name: "London", desc: "The historic city", img: "https://source.unsplash.com/200x150/?london" },
+    { id: 6, name: "Sydney", desc: "Harbor city", img: "https://source.unsplash.com/200x150/?sydney" },
+  ];
 
   const filtered = destinations.filter((d) =>
     d.name.toLowerCase().includes(search.toLowerCase())
@@ -34,16 +32,27 @@ const destinations = [
   };
 
   return (
-    <div className="app">
-    <div className="bg">
-      <h1>🌍 Travel Planner</h1>
-     </div> <input
+  <>
+  <div className="app">
+  <div className="welcome-section">
+    <h1>🌍 Welcome to <span>Dream Destinations</span></h1>
+    <p>Discover breathtaking places, plan your next adventure, and save your favorites — all in one place!</p>
+    <button className="explore-btn">Start Exploring</button>
+  </div>
+
+  
+</div>
+
+  <div className="app">
+      <div className="bg">
+        <h1>🌍 Travel Planner</h1>
+      </div> 
+      <input
         type="text"
         placeholder="Search destinations..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-
       <div className="cards">
         {filtered.map((place) => (
           <div key={place.id} className="card">
@@ -58,7 +67,7 @@ const destinations = [
           </div>
         ))}
       </div>
-    </div>
+    </div></>
   );
 }
 

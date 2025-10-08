@@ -1,213 +1,211 @@
-/* Reset & Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* === Global Reset === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Animated gradient sky background */
+/* === Body Background Animation === */
 body, html {
-width: 100vw;
+  width: 100vw;
   height: 100%;
-background-color: black;
-  background-size: 400% 400%;
-  margin-top: 0%;
-  animation: travelSky 12s ease infinite;
- 
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 800% 800%;
+  animation: gradientBG 15s ease infinite;
+  overflow-x: hidden;
 }
 
-@keyframes travelSky {
+@keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+
+
+
+
+/* === Welcome Section === */
+.welcome-section {
+
+  text-align: center;
+  color: white;
+ 
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+.welcome-section h1 span {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.explore-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ff512f;
+}
+
+/* === Fade-in Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .welcome-section h1 { font-size: 2.3rem; }
+  .welcome-section p { font-size: 1rem; padding: 0 10px; }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 { font-size: 1.8rem; }
+  .welcome-section p { font-size: 0.9rem; }
+}
+
+/* === Main App Container === */
 .app {
   width: 100%;
   max-width: 1100px;
-  padding: 20px;
+  margin:  19vh auto;
+  padding-top: 80px; /* ✅ top se 80px space */
   text-align: center;
-  color: rgb(249, 240, 240);
+  color: #fff;
 }
 
-.bg{
-width: 100vw;
-height: 90vh;
-display: grid;
-justify-content: center;
-align-items: center;
-
-}
-
-/* Title */
+/* === Heading Section === */
 .bg h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0px;
-  font-weight: 600;
+  font-size: 2.8rem;
+  font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 3px 15px rgba(0,0,0,0.3);
+  margin-bottom: 25px;
 }
 
-/* Search bar */
+/* === Input Box === */
 .app input {
   width: 80%;
   max-width: 450px;
-  padding: 12px 15px;
-  border: none;
+  padding: 12px 20px;
   border-radius: 30px;
+  border: none;
   outline: none;
   font-size: 1rem;
-  margin-left: 33rem;
-  box-shadow: 0 5px 15px rgba(227, 21, 21, 0.15);
   margin-bottom: 25px;
-  transition: 0.3s ease;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .app input:focus {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+  box-shadow: 0 6px 25px rgba(255,255,255,0.4);
 }
 
-/* Cards Grid */
+/* === Cards Section === */
 .cards {
-width: 100%;
   display: grid;
-  flex-direction: row;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  justify-content: center;
-  padding: 10px;
-  margin-left: 11rem;
+  justify-items: center;
+  padding: 0 20px;
 }
 
-/* Individual Card */
 .card {
-width: 100%;
-  background: rgba(245, 247, 247, 0.15);
-  backdrop-filter: blur(12px);
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform 0.4s, box-shadow 0.4s;
   overflow: hidden;
-  display: grid;
-  justify-content: center;
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
   border-radius: 15px;
-  margin-bottom: 15px;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s;
 }
 
 .card:hover img {
   transform: scale(1.1);
 }
 
-/* Card text */
 .card h3 {
-  font-size: 1.3rem;
-  color: #fff;
-  margin-bottom: 8px;
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
 }
 
 .card p {
-  font-size: 0.95rem;
-  color: #f1f1f1;
-  margin-bottom: 12px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
-/* Favorite button */
+/* === Buttons === */
 .card button {
-  background: linear-gradient(45deg, #ff512f, #f09819);
-  border: none;
-  color: white;
-  padding: 10px 16px;
+  padding: 8px 16px;
   border-radius: 25px;
+  border: none;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.9rem;
+  background: linear-gradient(45deg, #ff512f, #f09819);
+  color: #fff;
   transition: 0.3s;
 }
 
 .card button:hover {
   background: linear-gradient(45deg, #f09819, #ff512f);
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
-/* Responsive tweaks */
+/* === Responsive Styles === */
 @media (max-width: 768px) {
-  .app h1 {
-    font-size: 2rem;
-  }
-
-  .app input {
-    width: 90%;
-    font-size: 0.95rem;
-  }
-
-  .card img {
-    height: 160px;
-  }
-}
-
-@media (max-width: 480px) {
-  .app h1 {
-    font-size: 1.6rem;
-  }
-
-  .card {
-    padding: 15px;
-   
-  }
-
-  .card p {
-    font-size: 0.85rem;
-  }
-  
+  .bg h1 { font-size: 2rem; }
+  .app input { width: 90%; }
+  .card img { height: 130px; }
 }
 
 @media (max-width: 450px) {
-  .bg h1 {
-    font-size: 1.8rem;
-  }
-
-  .app input {
-    width: 90%;
-    font-size: 0.9rem;
-    margin-left: 0; /* center on mobile */
-  }
-
-  .cards {
-    width: 0%;
-    
-    gap: 15px;
- 
-  }
-  
-
-  .card img {
-    height: 140px;
-  }
-
-  .card h3 {
-    font-size: 1.1rem;
-  }
-
-  .card p {
-    font-size: 0.8rem;
-  }
+  .bg h1 { font-size: 1.6rem; }
+  .card img { height: 120px; }
+  .card h3 { font-size: 1rem; }
+  .card p { font-size: 0.8rem; }
 }

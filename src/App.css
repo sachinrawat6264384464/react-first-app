@@ -46,7 +46,7 @@ background-size: cover;
   padding: 15px 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 10;
  
  
@@ -61,6 +61,7 @@ background-size: cover;
 .menu {
   display: flex;
   gap: 2rem;
+  
 }
 
 .menu h2 {
@@ -146,9 +147,7 @@ background-size: cover;
 
 /* === Responsive Navbar === */
 @media (max-width: 900px) {
-  .menu {
-    display: none;
-  }
+  
 
   .nav {
     justify-content: space-between;
@@ -177,5 +176,8 @@ background-size: cover;
 
   .hero-text p {
     font-size: 1rem;
+  }
+  .menu h2{
+  font-size: 1.1rem;
   }
 }

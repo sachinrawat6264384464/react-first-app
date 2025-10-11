@@ -20,12 +20,15 @@ function FavoritesPage() {
     <div style={{ 
       padding: "2rem", 
       minHeight: "100vh",
-      background: "linear-gradient(135deg, #141415ff, #101111ff)",
+      background: "linear-gradient(135deg, #10af9cff, #9e0d58ff)",
       color: "white",
       textAlign: "center",
-      marginTop:"10vh",
+    
     }}>
-      <h1>❤️ Your Favorite Destinations</h1>
+      <h1  style={{ 
+     marginTop:"10%",
+    
+    }} >❤️ Your Favorite Destinations</h1>
 
       {favorites.length === 0 ? (
         <p style={{ marginTop: "2rem", fontSize: "1.2rem" }}>
@@ -40,7 +43,7 @@ function FavoritesPage() {
         }}>
           {favorites.map((place) => (
             <div key={place.id} style={{
-              background: "rgba(255, 255, 255, 0.1)",
+      background: "linear-gradient(270deg, #ff9ad7ff, #2de4f1ff, #f575ceff, #fbc2eb)",
               padding: "20px",
               borderRadius: "15px",
               backdropFilter: "blur(6px)",
@@ -64,12 +67,12 @@ function FavoritesPage() {
                 onClick={() => removeFavorite(place.id)}
                 style={{
                   position: "absolute",
-                  top: "10px",
+                  top: "22vh",
                   right: "10px",
                   padding: "5px 10px",
                   border: "none",
                   borderRadius: "5px",
-                  background: "red",
+                  background: "rgba(241, 37, 68)",
                   color: "white",
                   cursor: "pointer",
                   fontWeight: "600"

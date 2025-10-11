@@ -11,7 +11,8 @@ function App() {
     <Router>
       {/* ✅ Navbar always visible */}
       <nav className="nav">
-        
+        <h3>VISIT_THE
+        <span className="logo" >INDIA</span></h3>
         <menu className='menu'>
           <Link to="/" className="fav-link " style={{ 
      textDecoration:"none",
@@ -27,12 +28,13 @@ function App() {
      fontSize:"1.5rem",
   fontWeight: "600",
  
-    }} >❤️ Favorites</Link>
+    }} >Favorites</Link>
           <h2>Service</h2>
         </menu>
         <div className="btns">
           
         </div>
+        <h4>|||</h4>
       </nav>
 
       {/* ✅ Routes */}

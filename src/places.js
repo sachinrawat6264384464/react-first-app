@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import newyork from "./newyork.jpg"
-import bali from "./bali.jpg"
-import tokyo from "./tokyo.jpg"
-import syney from "./syney.jpg"
-import london from "./london.jpg"
-import paris from "./peris.jpg"
+import newyork from "./tajmahel.png"
+import bali from "./fool.jpg"
+import tokyo from "./gate way.png"
+import syney from "./hawamehal.jpg"
+import london from "./pahad one.jpg"
+import paris from "./suadmandir.png"
 import './places.css';
 
 function Places() {
@@ -18,6 +18,8 @@ const [search, setSearch] = useState("");
   { id: 2, name: "Tokyo", desc: "Land of the Rising Sun", img: tokyo },
   { id: 3, name: "New York", desc: "The Big Apple", img: newyork},
   { id: 4, name: "Bali", desc: "Tropical paradise", img: bali },
+  
+  
   { id: 5, name: "London", desc: "The historic city", img: london},
   { id: 6, name: "Sydney", desc: "Harbor city", img: syney },
 ];
@@ -40,7 +42,7 @@ const [search, setSearch] = useState("");
   return (
    <div className="app">
     <div className="bg">
-      <h1>🌍 Travel Planner</h1>
+      <h1> Travel Planner</h1>
     </div> 
     <input
       type="text"

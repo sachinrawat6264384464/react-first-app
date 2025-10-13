@@ -1,0 +1,130 @@
+/* === Container Styling === */
+.favorites-container {
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a7269, #1e8b87);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Heading === */
+.favorites-container h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.no-favorites {
+  font-size: 1.2rem;
+  color: #f8f8f8;
+  margin-top: 1rem;
+}
+
+/* === Grid Layout === */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+}
+
+/* === Favorite Card === */
+.favorite-card {
+  background: linear-gradient(145deg, #ffffff30, #ffffff15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.favorite-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.favorite-card:hover img {
+  transform: scale(1.05);
+}
+
+/* === Text === */
+.favorite-card h3 {
+  color: #fff;
+  font-weight: 700;
+  margin: 12px 0 5px;
+}
+
+.favorite-card p {
+  color: #e3e3e3;
+  font-size: 0.95rem;
+}
+
+/* === Delete Button === */
+.delete-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  background: rgba(255, 65, 65, 0.9);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 20, 20, 1);
+  transform: scale(1.1);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .favorites-container {
+    padding: 4rem 1rem;
+  }
+
+  .favorites-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .favorite-card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .favorite-card {
+    padding: 15px;
+  }
+
+  .favorite-card img {
+    height: 130px;
+  }
+
+  .favorite-card h3 {
+    font-size: 1.1rem;
+  }
+}

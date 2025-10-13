@@ -7,6 +7,7 @@ import FavoritesPage from "./FavoritesPage.js";
 import Footer from "./component/footer.js";
 import Places from "./places.js";
 import Text from "./component/text";
+import About from "./component/about";
 
 import TajMahalImg from "./images/tajmahel.png";
 import IndiaGateImg from "./images/indiagate.jpg";
@@ -81,6 +82,7 @@ function App() {
         />
 
         <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/About" element={<About />} />
         <Route path="/places" element={<Places />} />
       </Routes>
     </Router>

@@ -5,6 +5,10 @@ import tokyo from "./images/gate way.png"
 import syney from "./images/hawamehal.jpg"
 import london from "./images/pahad one.jpg"
 import paris from "./images/suadmandir.png"
+import gggg from "./images/gggg.png"
+import ghat from "./images/ghat.png"
+import mahel from "./images/hawa mahel.jpg"
+import lkl from "./images/lkl.png"
 import './places.css';
 
 function Places() {
@@ -14,14 +18,18 @@ const [search, setSearch] = useState("");
   );
 
   const destinations = [
-    { id: 1, name: "Paris", desc: "City of Lights", img: paris },
-  { id: 2, name: "Tokyo", desc: "Land of the Rising Sun", img: tokyo },
-  { id: 3, name: "New York", desc: "The Big Apple", img: newyork},
-  { id: 4, name: "Bali", desc: "Tropical paradise", img: bali },
+    { id: 1, name: "", desc: "City of Lights", img: paris },
+  { id: 2, name: "", desc: "Land of the Rising Sun", img: tokyo },
+  { id: 3, name: "", desc: "The Big Apple", img: newyork},
+  { id: 4, name: "", desc: "Tropical paradise", img: bali },
   
   
-  { id: 5, name: "London", desc: "The historic city", img: london},
-  { id: 6, name: "Sydney", desc: "Harbor city", img: syney },
+  { id: 5, name: "", desc: "The historic city", img: london},
+  { id: 6, name: "", desc: "Harbor city", img: syney },
+  { id: 7, name: "", desc: "Harbor city", img: gggg },
+  { id: 8, name: "", desc: "Harbor city", img: mahel },
+  { id: 9, name: "", desc: "Harbor city", img: ghat },
+  { id: 10, name: "", desc: "Harbor city", img: lkl },
 ];
 
 

@@ -11,7 +11,9 @@ const Nav = () => {
 
       <div className="menu">
         <Link to="/" className="nav-link">Home</Link>
+        <Link to="/about" className="nav-link">About</Link>
         <Link to="/favorites" className="nav-link">Favorites</Link>
+        
       </div>
     </nav>
   );

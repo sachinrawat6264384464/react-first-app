@@ -1,5 +1,3 @@
-
-
 /* === Global Reset === */
 * {
   margin: 0;
@@ -8,41 +6,25 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* === Body Background Animation === */
-body, html {
+/* === Home Background === */
+.home {
   width: 100vw;
-  height: 100%;
-  background-image: url("plaesss.jpg");
+  height: 100vh;
+  background-image: url("./plaesss.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-size: 800% 800%;*/
-
-  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-
-/*@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-
-
- === Welcome Section === */
- 
- .app{
- width: 100%;
- height: 70vh;
- 
- }
+/* === Welcome Section === */
 .welcome-section {
-
   text-align: center;
   color: white;
- padding-top: 16%;
+  padding: 2rem;
   animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -50,62 +32,55 @@ body, html {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 1.2px;
-  text-shadow: 0 4px 10px rgba(13, 13, 13, 0.4);
-
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-.welcome-section h2 {
-  font-size: 5rem;
-  font-weight: 900;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 1.2px;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 
-}
 .welcome-section h1 span {
   background: linear-gradient(45deg, #fb6d07, #ff2f00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.welcome-section h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.2px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  margin-top: 1rem;
+}
+
 .welcome-section h2 span {
   background: linear-gradient(45deg, hsla(200, 93%, 37%, 0.804), #0072ff);
   -webkit-background-clip: text;
-
   -webkit-text-fill-color: transparent;
 }
+
+.scroll-text {
+  display: inline-block;
+  overflow: hidden;
+  animation: scrollLeft 3s linear infinite alternate;
+}
+
 .welcome-section p {
   font-size: 1.2rem;
-  color: #f0f0f0;
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 1.5rem auto 2rem;
   line-height: 1.6;
+  color: #f0f0f0;
 }
 
 .explore-btn {
-text-decoration: none;
+  text-decoration: none;
   padding: 12px 28px;
-  border: none;
   border-radius: 30px;
   font-weight: 600;
-background: #fb6d07;
+  background: #fb6d07;
   color: white;
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.3);
-}
-.scroll-text {
-    overflow: hidden;
-  animation: scrollLeft 2s linear infinite alternate;
-
-
- 
-  
-  
-}
-
-@keyframes scrollLeft {
-  0% { transform: translateY(10%); }
-  100% { transform: translateY(-32%); }
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .explore-btn:hover {
@@ -113,62 +88,35 @@ background: #fb6d07;
   box-shadow: 0 0 15px #ff512f;
 }
 
-/* === Fade-in Animation === */
+/* === Animations === */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-70px); }
+  from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === Responsive === */
+@keyframes scrollLeft {
+  0% { transform: translateY(10%); }
+  100% { transform: translateY(-32%); }
+}
+
+/* === Responsive Styles === */
+@media (max-width: 1024px) {
+  .welcome-section h1 { font-size: 2.8rem; }
+  .welcome-section h2 { font-size: 4rem; }
+  .welcome-section p { font-size: 1rem; }
+}
+
 @media (max-width: 768px) {
   .welcome-section h1 { font-size: 2.3rem; }
-  .welcome-section p { font-size: 1rem; padding: 0 10px; }
+  .welcome-section h2 { font-size: 3rem; }
+  .welcome-section p { font-size: 0.95rem; }
+  .explore-btn { font-size: 0.95rem; padding: 10px 22px; }
 }
 
 @media (max-width: 480px) {
   .welcome-section h1 { font-size: 1.8rem; }
-  .welcome-section p { font-size: 0.9rem; }
+  .welcome-section h2 { font-size: 2.5rem; }
+  .welcome-section p { font-size: 0.85rem; }
+  .explore-btn { font-size: 0.85rem; padding: 8px 18px; }
+  .scroll-text { animation: scrollLeft 4s linear infinite alternate; }
 }
-@media (max-width: 480px) {
-  body, html {
-  
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 40vh;
-  }
-  .app{
-
-border: none;
-
-position: absolute;
-top: 70%;
-left: 70%;
-
- 
- }
- .welcome-section p {
- font-size: 2.3rem;
- opacity: 0;
- 
- }
- .welcome-section h1 {
-  
-font-size: 3.4rem;
- opacity: 1;
- 
- }
-  .welcome-section h2{
-  margin-top: 10%;
-  font-size: 6.6rem;
-  }
-  .explore-btn{
-  font-size: 2rem;
-  position: relative;
-  bottom: 55vh;
-  }
-}
-/* === Main App Container === */
-
-
-/* === Heading Section === */

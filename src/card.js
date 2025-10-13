@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Card() {
   
   return (
-  
+  <section className="home">
   <div className="app">
   <div className="welcome-section">
     <h1> Welcome to  <span >Dream Destinations</span></h1>
@@ -17,7 +17,7 @@ function Card() {
 
   
 </div>
-
+</section>
 
   );
 }

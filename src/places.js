@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import newyork from "./tajmahel.png"
-import bali from "./fool.jpg"
-import tokyo from "./gate way.png"
-import syney from "./hawamehal.jpg"
-import london from "./pahad one.jpg"
-import paris from "./suadmandir.png"
+import newyork from "./images/tajmahel.png"
+import bali from "./images/fool.jpg"
+import tokyo from "./images/gate way.png"
+import syney from "./images/hawamehal.jpg"
+import london from "./images/pahad one.jpg"
+import paris from "./images/suadmandir.png"
 import './places.css';
 
 function Places() {

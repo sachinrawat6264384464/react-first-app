@@ -1,48 +1,87 @@
 import React from "react";
-import Places from './places.js'; // ✅ correct path
-import './App.css';
-import Card from './card.js';
-import FavoritesPage from './FavoritesPage.js'; // ❌ galat tha, ab sahi path diya
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Nav from "./component/nav"; // ✅ Renamed Text4 → Nav for clarity
+import Card from "./card.js";
+import FavoritesPage from "./FavoritesPage.js";
+import Footer from "./component/footer.js";
+import Places from "./places.js";
+import Text from "./component/text";
+
+import TajMahalImg from "./images/tajmahel.png";
+import IndiaGateImg from "./images/indiagate.jpg";
 
 function App() {
-
   return (
     <Router>
       {/* ✅ Navbar always visible */}
-      <nav className="nav">
-        <h3>VISIT_THE
-        <span className="logo" >INDIA</span></h3>
-        <menu className='menu'>
-          <Link to="/" className="fav-link " style={{ 
-     textDecoration:"none",
-     color:"white",
-     fontSize:"1.5rem",
-  fontWeight: "600",
- 
-    }} >Home</Link>
-          <h2>About</h2>
-          <Link to="/favorites" className="fav-link " style={{ 
-     textDecoration:"none",
-     color:"white",
-     fontSize:"1.5rem",
-  fontWeight: "600",
- 
-    }} >Favorites</Link>
-          <h2>Service</h2>
-        </menu>
-        <div className="btns">
-          
-        </div>
-        <h4>|||</h4>
-      </nav>
+      <Nav />
 
       {/* ✅ Routes */}
       <Routes>
-        <Route path="/" element={<Card />} /> {/* Home Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Card />
+              <Text
+                content1={
+                  <p style={{ fontSize: "1.2rem" }}>
+                    India Gate, located in New Delhi, is a war memorial dedicated
+                    to Indian soldiers who died in World War I and the Afghan Wars.
+                    Designed by Sir Edwin Lutyens, it stands 42 meters tall and is
+                    made of sandstone. The structure is engraved with the names of
+                    over 13,000 soldiers, honoring their bravery and sacrifice.
+                    Surrounded by lush lawns, it is a popular spot for both tourists
+                    and locals to visit and relax. India Gate symbolizes national
+                    pride and serves as a venue for ceremonial events, including the
+                    Republic Day parade.
+                  </p>
+                }
+                content2={
+                  <img
+                    src={IndiaGateImg}
+                    alt="India Gate"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "18px",
+                    }}
+                  />
+                }
+              />
+
+              <Text
+                content1={
+                  <img
+                    src={TajMahalImg}
+                    alt="Taj Mahal"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "18px",
+                    }}
+                  />
+                }
+                content2={
+                  <p style={{ fontSize: "1.2rem" }}>
+                    The Taj Mahal, in Agra, India, is a world-famous monument of
+                    love. It was built by Emperor Shah Jahan in memory of his wife,
+                    Mumtaz Mahal. Made entirely of white marble, it is admired for
+                    its perfect symmetry and intricate designs. Surrounded by
+                    gardens and reflecting pools, it offers a breathtaking view. The
+                    Taj Mahal is a UNESCO World Heritage Site and a symbol of
+                    India’s rich cultural heritage.
+                  </p>
+                }
+              />
+              <Footer/>
+            </>
+          }
+        />
+
         <Route path="/favorites" element={<FavoritesPage />} />
-         <Route path="/places" element={<Places />} /> 
-        {/* Favorites Page */}
+        <Route path="/places" element={<Places />} />
       </Routes>
     </Router>
   );

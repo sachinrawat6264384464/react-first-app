@@ -9,7 +9,10 @@
 }
 
 /* === Body Background Animation === */
+body{
+background-color: black;
 
+}
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
@@ -29,7 +32,7 @@
  
   max-width: 1100px;
   margin:  19vh auto;
-  padding-top: 50px; /* ✅ top se 80px space */
+  padding-top: 20vh; /* ✅ top se 80px space */
   text-align: center;
   color: #fff;
   

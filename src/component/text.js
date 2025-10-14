@@ -6,7 +6,7 @@ const Text = ({ content1, content2 }) => {
     flexWrap: "wrap", // allow stacking on small screens
     justifyContent: "center", // center content horizontally
     alignItems: "flex-start",
-    backgroundColor: "rgba(40, 39, 39, 1)",
+    backgroundColor: "rgba(143, 146, 146, 1)",
     padding: "20px",
     gap: "20px", // spacing between boxes
     minHeight: "50vh",

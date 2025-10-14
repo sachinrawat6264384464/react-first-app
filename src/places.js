@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import newyork from "./images/tajmahel.png"
-import bali from "./images/fool.jpg"
-import tokyo from "./images/gate way.png"
-import syney from "./images/hawamehal.jpg"
-import london from "./images/pahad one.jpg"
-import paris from "./images/suadmandir.png"
-import gggg from "./images/gggg.png"
-import ghat from "./images/ghat.png"
-import mahel from "./images/hawa mahel.jpg"
-import lkl from "./images/lkl.png"
+import newyork from "./images/kerala.png"
+import bali from "./images/manaly.jpg"
+import tokyo from "./images/kolkata.jpg"
+import syney from "./images/Goa.png"
+import london from "./images/himalaya.jpg"
+import paris from "./images/darjeeling.jpg"
+import gggg from "./images/chennai.jpg"
+import ghat from "./images/rajasthan.jpg"
+import mahel from "./images/varanasi.jpg"
+
 import './places.css';
 
 function Places() {
@@ -18,18 +18,18 @@ const [search, setSearch] = useState("");
   );
 
   const destinations = [
-    { id: 1, name: "", desc: "City of Lights", img: paris },
-  { id: 2, name: "", desc: "Land of the Rising Sun", img: tokyo },
-  { id: 3, name: "", desc: "The Big Apple", img: newyork},
-  { id: 4, name: "", desc: "Tropical paradise", img: bali },
+    { id: 1, name: "Kerala", desc: "City of Lights", img: paris },
+  { id: 2, name: "Manaly", desc: "Land of the Rising Sun", img: tokyo },
+  { id: 3, name: "kolkata", desc: "The Big Apple", img: newyork},
+  { id: 4, name: "Goa", desc: "Tropical paradise", img: bali },
   
   
-  { id: 5, name: "", desc: "The historic city", img: london},
-  { id: 6, name: "", desc: "Harbor city", img: syney },
-  { id: 7, name: "", desc: "Harbor city", img: gggg },
-  { id: 8, name: "", desc: "Harbor city", img: mahel },
-  { id: 9, name: "", desc: "Harbor city", img: ghat },
-  { id: 10, name: "", desc: "Harbor city", img: lkl },
+  { id: 5, name: "Himachal", desc: "The historic city", img: london},
+  { id: 6, name: "darjeeling", desc: "Harbor city", img: syney },
+  { id: 7, name: "chennai", desc: "Harbor city", img: gggg },
+  { id: 8, name: "rajasthan", desc: "Harbor city", img: mahel },
+  { id: 9, name: "vanarasi", desc: "Harbor city", img: ghat },
+  
 ];
 
 

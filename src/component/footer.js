@@ -13,12 +13,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="footer-links">
-        <a href="#about">About</a>
-        <a href="#places">Places</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </div>
+    
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Visit_The_India. All rights reserved.</p>

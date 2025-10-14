@@ -1,7 +1,7 @@
 .about-india {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #001f3f, #0074D9);
+  background: linear-gradient(135deg, #32998b, #d06005);
   color: white;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
   background: rgba(255, 255, 255, 0.1);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(255, 255, 255);
   backdrop-filter: blur(10px);
 }
 
@@ -27,7 +27,7 @@
 }
 
 .about-container h1 span {
-  background: linear-gradient(45deg, #ff512f, #dd2476);
+  background: linear-gradient(45deg, #0482b4, #dd2476);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

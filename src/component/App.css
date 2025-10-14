@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: 100;
-  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+  background: rgba(130, 126, 126, 0.4); /* semi-transparent overlay */
 }
 
 /* === Logo & Branding === */

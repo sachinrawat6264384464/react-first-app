@@ -28,15 +28,15 @@ function App() {
               <Text
                 content1={
                   <p style={{ fontSize: "1.2rem" }}>
-                    India Gate, located in New Delhi, is a war memorial dedicated
-                    to Indian soldiers who died in World War I and the Afghan Wars.
-                    Designed by Sir Edwin Lutyens, it stands 42 meters tall and is
-                    made of sandstone. The structure is engraved with the names of
-                    over 13,000 soldiers, honoring their bravery and sacrifice.
-                    Surrounded by lush lawns, it is a popular spot for both tourists
-                    and locals to visit and relax. India Gate symbolizes national
-                    pride and serves as a venue for ceremonial events, including the
-                    Republic Day parade.
+                    1. India Gate is located in New Delhi and serves as a war memorial dedicated to Indian soldiers who died in World War I and the Afghan Wars.<br></br><br></br>
+
+                    2. It was designed by Sir Edwin Lutyens and stands 42 meters tall, made entirely of sandstone.<br></br><br></br>
+
+                    3. The structure is engraved with the names of over 13,000 soldiers, honoring their bravery and sacrifice.<br></br><br></br>
+
+                    4. by lush green lawns, it is a popular spot for both tourists and locals to visit and relax.<br></br><br></br>
+
+                    5. India Gate symbolizes national pride and is also used as a venue for ceremonial events, including the Republic Day parade.<br></br><br></br>
                   </p>
                 }
                 content2={
@@ -46,6 +46,7 @@ function App() {
                     style={{
                       width: "100%",
                       height: "100%",
+                      fontSize:"2rem",
                       borderRadius: "18px",
                     }}
                   />
@@ -66,13 +67,15 @@ function App() {
                 }
                 content2={
                   <p style={{ fontSize: "1.2rem" }}>
-                    The Taj Mahal, in Agra, India, is a world-famous monument of
-                    love. It was built by Emperor Shah Jahan in memory of his wife,
-                    Mumtaz Mahal. Made entirely of white marble, it is admired for
-                    its perfect symmetry and intricate designs. Surrounded by
-                    gardens and reflecting pools, it offers a breathtaking view. The
-                    Taj Mahal is a UNESCO World Heritage Site and a symbol of
-                    India’s rich cultural heritage.
+                  1. The Taj Mahal, located in Agra, India, is a world-famous monument of love.<br></br><br></br>
+
+                  2. It was built by Emperor Shah Jahan in memory of his beloved wife, Mumtaz Mahal.<br></br><br></br>
+
+                  3. Constructed entirely of white marble, it is renowned for its perfect symmetry and intricate craftsmanship.<br></br><br></br>
+
+                  4. The monument is surrounded by beautiful gardens and reflecting pools, creating a breathtaking view.<br></br><br></br>
+
+                  5. It is recognized as a UNESCO World Heritage Site and stands as a symbol of India’s rich cultural heritage.
                   </p>
                 }
               />

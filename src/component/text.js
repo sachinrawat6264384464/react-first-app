@@ -6,17 +6,17 @@ const Text = ({ content1, content2 }) => {
     flexWrap: "wrap", // allow stacking on small screens
     justifyContent: "center", // center content horizontally
     alignItems: "flex-start",
-    backgroundColor: "rgba(143, 146, 146, 1)",
+ background: "linear-gradient(135deg, rgba(252, 188, 128, 1), #f3701eff)",
     padding: "20px",
     gap: "20px", // spacing between boxes
     minHeight: "50vh",
   };
 
-  const boxStyle = {
+ const boxStyle = {
     flex: "1 1 300px", // base width 300px, grows/shrinks
     maxWidth: "600px", // prevent too wide on large screens
     minHeight: "250px",
-    backgroundColor: "rgba(61, 59, 59, 1)",
+
     borderRadius: "20px",
     color: "white",
     display: "flex",

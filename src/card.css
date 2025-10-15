@@ -36,7 +36,7 @@
 }
 
 .welcome-section h1 span {
-  background: linear-gradient(45deg, #fb6d07, #ff2f00);
+  background: linear-gradient(45deg, white, #f7f7f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,0 +1,2 @@
+ hosted project link on netlify  =https://inspiring-moonbeam-f10b2b.netlify.app/ 
+  github deployed link =https://github.com/sachinrawat6264384464/react-first-app.git
